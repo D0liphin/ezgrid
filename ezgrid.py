@@ -175,9 +175,9 @@ class EZGrid: # the big boy class
         for w in self.widgets:
             if w.wij == None: 
                 if w.name != "EZPLACEHOLDER":
-                    w.wij = Label(text=f" {w.name} ", borderwidth=2, relief="groove")
+                    w.wij = Label(self.root, text=f" {w.name} ", borderwidth=2, relief="groove")
                 elif w.name == "EZPLACEHOLDER":
-                    self.toRemove.append(Label(text=""))
+                    self.toRemove.append(Label(self.root, text=""))
                     w.wij = self.toRemove[-1]
             w.wij.grid(
                 row=w.row,
