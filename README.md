@@ -5,6 +5,20 @@ It is especially difficult to add new columns in the middle of your grid, and in
 EZGrid seeks to make this all very easy to do, while retaining the basic functionality of your widgets (`tkinter.grid()` options to come).  
 EZGrid also allows rows to be split in ways that were previously very difficult.  
 
+# Table of contents
+1. [Example](#example)
+2. [How to use](#how-to-use)
+3. [`root`](#root)
+4. [`layout`](#layout)
+    1. [Adding a widget](#adding-a-widget)
+    2. [Important notes](#important-notes)
+    3. [Adding multiple widgets](#adding-multiple-widgets)
+    4. [Modifying widget columnspan](#modifying-widget-columnspan)
+    5. [Modifying widget rowspan](#modifying-widget-rowspan)
+    6. [Overlapping rowspan](#overlapping-rowspan)
+5. [`tkwidgets`](#tkwidgets)
+6. [Other](#other)
+
 ## Example
 
 This example shows the all the functionality of the program.
@@ -144,7 +158,7 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > 
 > ![](https://i.imgur.com/1JK3ZhO.png)  
 
-## `tkwidgets`
+### `tkwidgets`
 
 > `tkwidgets` is simply a dictionary that allows you to redesign widgets by their reference.  
 > example:  
@@ -164,6 +178,7 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > 
 > As you can see, all layout options still work for custom widgets.
 
+### Other
 
 ## `ezgrid._display()` and `ezgrid._clear()`
 
