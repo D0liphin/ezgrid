@@ -5,6 +5,38 @@ It is especially difficult to add new columns in the middle of your grid, and in
 EZGrid seeks to make this all possible and very fast, while retaining most of the functionality of your widgets (more coming soon).  
 EZGrid also allows rows to be split in ways that were previously very difficult.  
 
+## Example
+
+This example shows the all the functionality of the program.
+
+```python
+import tkinter as tk, ezgrid
+
+root = tk.Tk()
+
+
+page1 = """
+|     {PAGE 1}     |{page select} |
+|                  |{prv} |{nxt}  |
+|{The Fresh Prince}|      |       |
+|           {text1}               |
+"""
+
+tkwidgets = {
+    'prv' : tk.Button(text="🡄"),
+    'nxt' : tk.Button(text="🡆"),
+    'text1' : tk.Text(font=("helvetica", 10), width=50, height=6)
+}
+tkwidgets['text1'].insert(tk.INSERT, FRESH)
+
+
+page1 = ezgrid.EZGrid(page1, root, tkwidgets=tkwidgets)
+page1._display()
+
+root.mainloop()
+```  
+![](https://i.imgur.com/OfI2mnS.png)  
+
 ## How to use
 
 `ezgrid` has one class: `ezgrid.EZGrid`.    
@@ -128,34 +160,5 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > 
 > If you would like to forget a specific widget or add a new one, add it to `ezgrid.widgets:list`.
 
-## Example
 
-This example shows the all the functionality of the program.
-
-```python
-import tkinter as tk, ezgrid
-
-root = tk.Tk()
-
-
-page1 = """
-|     {PAGE 1}     |{page select} |
-|                  |{prv} |{nxt}  |
-|{The Fresh Prince}|      |       |
-|           {text1}               |
-"""
-
-tkwidgets = {
-    'prv' : tk.Button(text="🡄"),
-    'nxt' : tk.Button(text="🡆"),
-    'text1' : tk.Text(font=("helvetica", 10), width=50, height=6)
-}
-tkwidgets['text1'].insert(tk.INSERT, FRESH)
-
-
-page1 = ezgrid.EZGrid(page1, root, tkwidgets=tkwidgets)
-page1._display()
-
-root.mainloop()
-```
 
