@@ -118,6 +118,8 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > """
 > ```
 > ![](https://i.imgur.com/xrH91bg.png)  
+> 
+> Note: If you do not line up the pipes properly, there will be undesired behaviour.  
 
 ### Overlapping rowspan
 > Creating overlapping columns is very easy, but due to limitations with Tkinter, overlapping rows can be tricky.   
