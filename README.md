@@ -69,7 +69,7 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > ![`|{reference}|`](https://i.imgur.com/bc0Bn68.png)
 
 ### Important notes
-> __references cannot be `EZNONE` or `EZPLACEHOLDER`, these will cause likely undesired behaviours__  
+> __references cannot be `EZNONE` or `EZPLACEHOLDER`, these are used by the program for formatting, using them will result in undesired behaviour__  
 > Only __one__ newline character is permitted either side of the layout string. Therefore, only the below formats are permitted:
 > ```python
 > layout = """
