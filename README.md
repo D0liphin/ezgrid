@@ -157,10 +157,15 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 
 ## `ezgrid._display()` and `ezgrid._clear()`
 
-> - Running `ezgrid._display()` will run `ezgrid._clear()`, then place each widget in that grid using `tkinter.grid()`.
-> - Running `ezgrid._clear()` will forget all widgets.   
+> - Running `ezgrid._display()` will run `ezgrid._clear()`, then places each widget on `root` using `tkinter.grid()`.
+> - Running `ezgrid._clear()` will run `tkinter.grid_forget()` on all widgets.   
 > 
-> If you would like to forget a specific widget or add a new one, add it to `ezgrid.widgets:list`.
-
+> It is possible to modify the widgets on an `ezgrid.EZGrid`.  
+> ```python
+> newWidget = ezgrid.WidgetData('name')
+> newWidget.column, newWidget.row = 1, 2
+> newWidget.wij = Label(text="some text")
+> myGrid.widgets.append(newWidget)
+> ```
 
 
