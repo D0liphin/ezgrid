@@ -120,6 +120,16 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > ![](https://i.imgur.com/xrH91bg.png)  
 > 
 > Note: If you do not line up the pipes properly, there will be undesired behaviour.  
+> Further Note: Increasing the `rowspan` works slightly differently in EZGrid, for rowspans greater than 2, the following occurs:  
+> ```python 
+> layout = """
+> |{larger rowspan}|{thing 2}|
+> |                |         |
+> |                |         |
+> """
+> ```  
+> results in  
+> ![](https://i.imgur.com/DrFMX5W.png)  
 
 ### Overlapping rowspan
 > Creating overlapping columns is very easy, but due to limitations with Tkinter, overlapping rows can be tricky.   
