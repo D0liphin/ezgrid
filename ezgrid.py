@@ -2,7 +2,7 @@ from tkinter import *
 import time
 
 
-class WidgetData:
+class WidgetData: # A record containing all the information about a widget.
 
     def __init__(self, name):
         self.row = 0
@@ -118,7 +118,7 @@ def search_col(someWijs, starti, column, columnspan):
             raise Exception("blank cell not in line with a filled cell, cannot create multi-row widget")
 
 
-class EZGrid:
+class EZGrid: # the big boy class
 
     def __init__(self, layout:str, root:Toplevel, tkwidgets={ }):
         
@@ -165,7 +165,7 @@ class EZGrid:
             try: wij.wij = self.tkwidgets[wij.name]
             except: pass
 
-    def _display(self):
+    def _display(self): # runs tk.grid() on each widget in this EZGrid
 
         self._clear()
         self.toRemove = []
@@ -200,7 +200,7 @@ class EZGrid:
         self.root.update()
         
 
-    def _clear(self):
+    def _clear(self): # runs tk.grid_forget() on all widgets in this EZGrid
         for wij in self.widgets:
             try: wij.wij.grid_forget()
             except: pass
