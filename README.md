@@ -178,7 +178,7 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > 
 > As you can see, all layout options still work for custom widgets.
 
-### Other
+# Other
 
 ## `ezgrid._display()` and `ezgrid._clear()`
 
