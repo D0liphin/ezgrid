@@ -50,8 +50,8 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 
 ## `layout`  
 ### Adding a widget
-> `ezgrid` uses a table set up similar to markdown to define a grid.  
-> Each widget is enclosed in pipes (`|`). The widget references is enclosed in curly braces `{}`.  
+> EZGrid uses a table set-up not dissimilar to markdown to define a grid.  
+> Each widget is enclosed in pipes (`|`). The widget references are enclosed in curly braces `{}`.  
 > For example:  
 > ```python
 > layout = """
