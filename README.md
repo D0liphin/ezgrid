@@ -160,12 +160,16 @@ ezgrid.EZGrid(layout, root, tkwidgets={ })
 > - Running `ezgrid._display()` will run `ezgrid._clear()`, then places each widget on `root` using `tkinter.grid()`.
 > - Running `ezgrid._clear()` will run `tkinter.grid_forget()` on all widgets.   
 > 
-> It is possible to modify the widgets on an `ezgrid.EZGrid`.  
+
+## Things EZGrid is bad at
+
+> It is possible, but difficult to modify the widgets on an `ezgrid.EZGrid`.  
 > ```python
 > newWidget = ezgrid.WidgetData('name') # WidgetData stores all data about a widget, it only takes one argument : 'name:str'
 > newWidget.column, newWidget.row = 1, 2 # Specifying the row and column, rowspan and columnspan can be specified too
 > newWidget.wij = Label(text="some text") # Creating a custom widget
 > myGrid.widgets.append(newWidget) # Adding out new widget to our grid
-> ```
+> ```  
 
+> It is currently impossible to pass arguments to `tkinter.grid()`. There will be options for this in the future.
 
