@@ -2,7 +2,7 @@
 
 Using `tkinter.grid()` can be very powerful, but is also incredibly arduous to implement well.  
 It is especially difficult to add new columns in the middle of your grid, and increasing the span of a widget to fit more within it's height/width is terribly difficult.  
-EZGrid seeks to make this all very easy to do, while retaining most of the functionality of your widgets (more coming soon).  
+EZGrid seeks to make this all very easy to do, while retaining the basic functionality of your widgets (`tkinter.grid()` options to come).  
 EZGrid also allows rows to be split in ways that were previously very difficult.  
 
 ## Example
