@@ -110,7 +110,7 @@ def search_col(someWijs, starti, column, columnspan):
     while True:
         try:
             if someWijs[i].column == column and someWijs[i].columnspan == columnspan:
-                print(someWijs[i])
+                #print(someWijs[i])
                 return i
             else: 
                 i -= 1
@@ -170,7 +170,7 @@ class EZGrid: # the big boy class
         self._clear()
         self.toRemove = []
 
-        print([w.__str__() for w in self.widgets])
+        #print([w.__str__() for w in self.widgets])
 
         for w in self.widgets:
             if w.wij == None: 
@@ -187,8 +187,8 @@ class EZGrid: # the big boy class
                 sticky=(N, E, S, W)
             )
         
-        print([w.__str__() for w in self.widgets])
-        print([w.__str__() for w in self.toRemove])
+        #print([w.__str__() for w in self.widgets])
+        #print([w.__str__() for w in self.toRemove])
 
         width = 0
         try: 
