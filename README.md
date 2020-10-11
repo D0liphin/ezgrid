@@ -51,7 +51,7 @@ root.mainloop()
 ```  
 ![](https://i.imgur.com/OfI2mnS.png)  
 
-## How to use
+# How to use
 
 `ezgrid` has one class: `ezgrid.EZGrid`.    
 That class has only __3 attributes__ and __2 methods__ you need to worry about.  
